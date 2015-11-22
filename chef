@@ -1,0 +1,1 @@
+alias vagrantaws="VAGRANT_PROVISIONER=chef-client vagrant up --provider=aws"

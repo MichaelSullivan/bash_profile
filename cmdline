@@ -1,0 +1,1 @@
+alias ffind="find . -type f | xargs grep"

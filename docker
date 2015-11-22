@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+# Docker stuff
+export DOCKER_HOST=tcp://localhost:2375
+
+alias vbox_kick="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"

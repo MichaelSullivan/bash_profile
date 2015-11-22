@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+alias gitl="git log --pretty=oneline --abbrev-commit"
+alias gff='git flow feature'
+alias p='cd ~/Projects; ls'
+

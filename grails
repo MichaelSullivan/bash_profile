@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+# Setup an environment variable for Grails
+#export GRAILS_HOME="/Applications/grails"
+#export PATH="/Applications/grails/bin:$PATH"
+
+export GRAILS_OPTS="-Xms2g -Xmx4g -XX:MaxNewSize=256m -XX:MaxPermSize=512m -XX:+UseG1GC"
