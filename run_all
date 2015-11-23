@@ -1,10 +1,10 @@
-exec chef
-exec cmdline
-exec docker
-exec git
-exec grails
-exec homebrew
-exec java
-exec prompt
-exec ruby
+. ~/profile/chef
+. ~/profile/cmdline
+. ~/profile/docker
+. ~/profile/git
+. ~/profile/grails
+. ~/profile/homebrew
+#. ~/profile/java
+. ~/profile/prompt
+. ~/profile/ruby
 
