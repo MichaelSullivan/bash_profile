@@ -18,3 +18,5 @@ brew_install_or_upgrade 'tree'
 
 brew_tap caskroom/fonts
 brew_cask_install font-inconsolata
+
+rbenv install -s 2.1.6
