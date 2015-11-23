@@ -16,7 +16,7 @@ parse_git_branch_zsh() {
 
 if [ -n "$ZSH_VERSION" ]; then
 	autoload -U colors && colors
-	PR_CURRDIR="%{$fg[blue]%}%~%{$reset_color%}"
+	PR_CURRDIR="%{$fg[cyan]%}%~%{$reset_color%}"
 	PR_USERANDHOST="%{$fg[red]%}[%n@%m]%{$reset_color%}"
 	PR_GITINFO="%{$fg[white]%}%{$reset_color%}"
 	PROMPT="${PR_USERANDHOST} ${PR_CURRDIR}
