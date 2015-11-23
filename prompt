@@ -6,7 +6,23 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Include Git 
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\n\[\e[31m\][\u@\h]\[\e[0m\] \[\e[36m\]\w\[\e[01;37m\]\$(parse_git_branch)\[\e[0m\]\n\$ "
-#export PS1="\n\[\e[31m\][\u@\h]\[\e[0m\] \[\e[36m\]\w\[\e[0m\]\n\$ "
+
+parse_git_branch_zsh() {
+	ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
+	echo "$ref"
+}
+
+if [ -n "$ZSH_VERSION" ]; then
+	autoload -U colors && colors
+	PR_CURRDIR="%{$fg[blue]%}%~%{$reset_color%}"
+	PR_USERANDHOST="%{$fg[red]%}[%n@%m]%{$reset_color%}"
+	PR_GITINFO="%{$fg[white]%}$(parse_git_branch_zsh)%{$reset_color%}"
+	PROMPT="${PR_USERANDHOST} ${PR_CURRDIR}
+\$ "
+	RPROMPT="${PR_GITINFO}"
+else
+	export PS1="\n\[\e[31m\][\u@\h]\[\e[0m\] \[\e[36m\]\w\[\e[01;37m\]\$(parse_git_branch)\[\e[0m\]\n\$ "
+fi
+
