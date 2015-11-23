@@ -1,0 +1,10 @@
+exec chef
+exec cmdline
+exec docker
+exec git
+exec grails
+exec homebrew
+exec java
+exec prompt
+exec ruby
+

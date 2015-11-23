@@ -1,1 +1,2 @@
 alias ffind="find . -type f | xargs grep"
+export PATH="$HOME/.bin:$PATH"
