@@ -13,10 +13,26 @@ brew_cask_install() {
   fi
 }
 
+# Basics
 brew_install_or_upgrade 'git-flow'
 brew_install_or_upgrade 'tree'
+brew_install_or_upgrade 'wget'
 
+# Inconsolate Font
 brew_tap caskroom/fonts
 brew_cask_install font-inconsolata
 
+# Machine Learning Stuff
+brew_install_or_upgrade 'python'
+brew_tap homebrew/python
+brew install scipy
+pip install --upgrade nltk
+pip install --upgrade sklearn
+
+brew_tap homebrew/versions
+brew_install_or_upgrade  homebrew/versions/phantomjs198
 rbenv install -s 2.1.6
+rbenv shell 2.1.6
+gem install bundler
+rbenv rehash
+rbenv shell --unset
