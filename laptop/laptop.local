@@ -34,5 +34,6 @@ brew_install_or_upgrade  homebrew/versions/phantomjs198
 rbenv install -s 2.1.6
 rbenv shell 2.1.6
 gem install bundler
+gem install rails
 rbenv rehash
 rbenv shell --unset
