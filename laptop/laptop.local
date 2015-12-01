@@ -32,6 +32,10 @@ pip install --upgrade sklearn
 # AWS CLI
 brew_install_or_upgrade awscli
 
+# Cloudfoundry CLI
+brew_tap pivotal/tap
+brew_install_or_upgrade cloudfoundry-cli
+
 brew_tap homebrew/versions
 brew_install_or_upgrade  homebrew/versions/phantomjs198
 rbenv install -s 2.1.6
