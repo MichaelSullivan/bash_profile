@@ -1,0 +1,1 @@
+alias ec2="aws ec2 describe-instances  --query 'Reservations[].Instances[].{Address:PrivateIpAddress,_InstanceId:InstanceId,Name:Tags[?Key==\`Name\`]|[0].Value,Status:State.Name,_Zone:Placement.AvailabilityZone}' --output table | sort -t '|' -k3,3  | sed -e '1,5d'"
