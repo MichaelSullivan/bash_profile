@@ -1,11 +1,11 @@
 . ~/profile/ssh
-. ~/profile/chef
+#. ~/profile/chef
 . ~/profile/cmdline
 . ~/profile/docker
 . ~/profile/git
-. ~/profile/grails
+#. ~/profile/grails
 . ~/profile/homebrew
 #. ~/profile/java
 . ~/profile/prompt
-. ~/profile/ruby
+#. ~/profile/ruby
 . ~/profile/aws
